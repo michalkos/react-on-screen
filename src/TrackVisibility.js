@@ -12,6 +12,11 @@ export default class TrackVisibility extends PureComponent {
     once: PropTypes.bool,
 
     /**
+     * Define on change callback with isVisible parameter
+     */
+    onChange: PropTypes.func,
+
+    /**
      * Tweak the throttle interval
      * Check https://css-tricks.com/debouncing-throttling-explained-examples/ for more details
      */
@@ -174,6 +179,10 @@ export default class TrackVisibility extends PureComponent {
 
       if (isVisible && once) {
         this.removeListener();
+      }
+
+      if (this.onChange) {
+        this.onChange(isVisible);
       }
 
       this.setState({ isVisible });
