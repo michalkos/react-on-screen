@@ -7,6 +7,11 @@ interface TrackVisibilityProps {
   once?: boolean;
 
   /**
+  * Define on change callback with isVisible parameter
+  */
+  onChange: PropTypes.func,
+
+  /**
   * Tweak the throttle interval
   * Check https://css-tricks.com/debouncing-throttling-explained-examples/ for more details
   */
