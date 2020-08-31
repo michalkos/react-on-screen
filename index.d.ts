@@ -9,7 +9,7 @@ interface TrackVisibilityProps {
   /**
   * Define on change callback with isVisible parameter
   */
-  onChange?: (isVisible: bool) => void,
+  onChange?: (isVisible: boolean) => void,
 
   /**
   * Tweak the throttle interval
